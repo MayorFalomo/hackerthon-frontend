@@ -35,7 +35,10 @@ const Login = () => {
           appointment: "",
         };
         axios
-          .post("http://localhost:5000/api/users/login", userInfo)
+          .post(
+            "https://hackerthon-server.vercel.app/api/users/login",
+            userInfo
+          )
           .catch((err) => {
             console.log(err);
           });
@@ -65,7 +68,7 @@ const Login = () => {
           className="loginLogo"
           style={{ color: " #1d9aef", fontSize: "40px" }}
         /> */}
-          <h1>Sign In to Twitter </h1>
+          <h1>Sign In to Hospice </h1>
           <button onClick={signInWithGoogle} className="googleBtn">
             {" "}
             <FcGoogle size={30} /> Sign In With Google{" "}

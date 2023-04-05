@@ -13,7 +13,7 @@ function App() {
   const [cookies, setCookie] = useCookies(["user"]);
 
   const getCurrentUser = (id) => {
-    fetch(`http://localhost:5000/api/users/${id}`)
+    fetch(`https://hackerthon-server.vercel.app/api/users/${id}`)
       .then((res) => res.json())
       .then((res) => {
         setUser(res.user);
